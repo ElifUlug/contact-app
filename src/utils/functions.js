@@ -1,4 +1,3 @@
-// Database bilgi ekleme,bilgiyi alma, bilgi silme ve değiştirme
 import firebase from "./firebase";
 import { useState, useEffect } from "react";
 import {
@@ -12,7 +11,6 @@ import {
 } from "firebase/database";
 import Toastify from "./toast";
 
-// Bilgi Ekleme
 export const AddUser = (info) => {
   //db optional
   const db = getDatabase();
@@ -51,7 +49,6 @@ export const useFetch = () => {
   return { isLoading, contactList };
 };
 
-// Bilgi silme
 export const DeleteUser = (id) => {
   const db = getDatabase();
   const userRef = ref(db, "connect");
